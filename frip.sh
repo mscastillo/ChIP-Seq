@@ -14,7 +14,7 @@ for k in $( seq 0 $((${#FILES[@]} - 1)) ) ; do
  mergeBed -i $NAME.intersect -n > $NAME.counts
  READS=$(cat $NAME.intersect | wc -l )
  RiP=$(cat $NAME.counts | wc -l )
- FRiP=$( bc -l <<< " scale=2 ; 100*PEAKS/RiP  " )
+ FRiP=$( bc -l <<< " scale=2 ; 100*$PEAKS/$RiP  " )
  echo $NAME$'\t'$FRiP
  
  rm -f $NAME.intersect
