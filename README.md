@@ -36,8 +36,9 @@ Script to generate a histogram from a given *bigwig* file around specifig genomi
 
 Next files are require to perform this analysis:
 
-1. A *bigWig* file with the density of aligned reads (it will be transform it into an intermediate file in *bedGraph* format). This script could perform the analysis in batch for all *bigwig* files from a given directory.
-2. A *bed* file with the genomic coordinates in [HOMER peak file format](http://homer.salk.edu/homer/ngs/quantification.html) where to compute the histogram.
+1. A *bigWig* file (that will be transform into *bedGraph* format). This script can perform the analysis in batch for all *bigWig* files from a given directory.
+
+2. A *bed* file with the genomic coordinates in [HOMER's peak file format](http://homer.salk.edu/homer/ngs/quantification.html) where to compute the histogram.
 
 Additionally, the script requires to set up the *region* and *bin* sizes as a standard parameter of the histogram and the *genome build*.
 
