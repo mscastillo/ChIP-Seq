@@ -30,6 +30,6 @@ This script depends on `bedSort` (from the [UCSC tools](http://hgdownload.cse.uc
 
 # `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh)
 
-This script generates a histogram around specifig genomic regions from a given *bigwig* file.
+This script generates a histogram from a given *bigwig* file around specifig genomic regions.
 
 It uses the *bigwig* and the original *BED* files to generate a matrix with the number of counts around specific genomic regions provided in [HOMER peak file format](http://homer.salk.edu/homer/ngs/quantification.html).
