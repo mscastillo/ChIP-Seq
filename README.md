@@ -48,7 +48,7 @@ The script will generate, for each *bigWig* file, a matrix (in *tsv* format) wit
 
 ### Dependecies
 
-* `bigWigToWig`, from [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)
+* `bigWigToWig`, from [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/).
 * `annotatePeaks.pl` from [Homer](http://homer.salk.edu/homer/ngs/annotation.html).
 
 ### Further analysis
