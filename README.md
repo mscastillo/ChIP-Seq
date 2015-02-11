@@ -23,13 +23,31 @@ Script to map a set of peaks files to the genomic coordinates of an enzyme's res
 # `bedpe2washu.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bedpe2washu.sh)
 
 
-This script process a file in *bedpe* format and produce a pair of *bed.gz* and *bed.gz.tbi* files to display the data on [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/) under the long-range interaction data.
+Script to process a long-range interaction data in *bedpe* format that outputs a pair of *bed.gz* and *bed.gz.tbi* files to display the data on [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/) under the long-range interaction data.
 
 This script depends on `bedSort` (from the [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)) and `bgzip` and `tabidx` from [samtools](http://samtools.sourceforge.net/tabix.shtml).
 
 
 # `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh)
 
-This script generates a histogram from a given *bigwig* file around specifig genomic regions.
+Script to generate a histogram from a given *bigwig* file around specifig genomic regions.
 
-It uses the *bigwig* and the original *BED* files to generate a matrix with the number of counts around specific genomic regions provided in [HOMER peak file format](http://homer.salk.edu/homer/ngs/quantification.html).
+### Inputs
+
+Next files are require to perform this analysis:
+
+1. A *bigWig* file with the density of aligned reads (it will be transform it into an intermediate file in *bedGraph* format). This script could perform the analysis in batch for all *bigwig* files from a given directory.
+2. A *bed* file with the genomic coordinates in [HOMER peak file format](http://homer.salk.edu/homer/ngs/quantification.html) where to compute the histogram.
+
+Additionally, the script requires to set up the *region* and *bin* sizes as a standard parameter of the histogram and the *genome build*.
+
+### Outputs
+
+The script will generate, for each *bigWig* file, a matrix (in *tsv* format) with the histograms around each genomic coordinates.
+
+### Dependecies
+
+* `bigWigToWig`, from [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)
+* `annotatePeaks.pl` from [Homer](http://homer.salk.edu/homer/ngs/annotation.html).
+
+### Further analysis
