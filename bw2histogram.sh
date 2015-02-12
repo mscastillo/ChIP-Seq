@@ -9,7 +9,7 @@
 
 ## VARIABLES # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-   PEAKS_FILE='peaks.bed' # A file with the genomic coordinates to where it is desired to compute the histogram. Minimun five columns (additional details, http://homer.salk.edu/homer/ngs/quantification.html).
+   PEAKS_FILE='example/peaks.homer.bed' # A file with the genomic coordinates to where it is desired to compute the histogram. Minimun five columns (additional details, http://homer.salk.edu/homer/ngs/quantification.html).
    GENOME='mm10' # Genome considered for the alignment. Possible values: 'hg19', 'mm10', etc...
    
 ## PARAMETERS # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -17,7 +17,7 @@
    bw_FILES=($(ls *.bw)) # Will perform the analysis on all the bw files of current folder.
    REGION_SIZE=2000 # Region arround the peak centre (in bp) where to perform the analysis.
    BIN_SIZE=10 # Size of the bin (in bp) to perform the analysis.
-   PATH=$PATH:/home/Programs/HOMER/bin/:/home/Programs/UCSC_programs/ # Update the PATH with the corresponding dependencies.
+   PATH=$PATH:/home/Programs/HOMER/bin/:/home/Programs/UCSC_programs/ # Update the PATH with the dependencies as necessary.
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
