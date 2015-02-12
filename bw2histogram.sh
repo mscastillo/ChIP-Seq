@@ -21,9 +21,9 @@
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-for k in $( seq 0 $((${#BED_FILES[@]} - 1)) ) ; do
+for k in $( seq 0 $((${#bw_FILES[@]} - 1)) ) ; do
 
-   FILE=${BED_FILES[$k]}
+   FILE=${bw_FILES[$k]}
    NAME=${FILE%.*}
    OUTPUTFILE=$NAME".matrix"
    bigWigToWig $NAME.bw $NAME.bedGraph
