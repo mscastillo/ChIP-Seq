@@ -5,14 +5,22 @@ This repository includes scripts for processing and analysing ChIP-Seq data.
 
 
 # `bed2frip.sh.m` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bed2frip.sh)
-
-
-This script will compute the Fraction of Reads-in-Peaks (FRiP) of a given peak profile in *bed* format. For adittional information about see:
+Script to compute the Fraction of Reads-in-Peaks (FRiP) of a given peak profile in *bed* format. For adittional information about this quality index, see:
 
 > ChIP-seq guidelines and practices of the ENCODE and modENCODE consortia. *Genome Research* (2012). [PubMed: 22955991](http://www.ncbi.nlm.nih.gov/pubmed/22955991)
 
-This scripts requires both (*i*) the peaks file in *bed* format and (*ii*) the original *BED* file with aligned reads.
+### Inputs
 
+This scripts requires both:
+
+1. the peaks file in *bed* format
+2. the original *BED* file with aligned reads
+
+The FRiP can be calculated in batch for all experiments from a given directory.
+
+### Outputs
+
+The script will output, for each pair of *BED*-*bed* files, the name of the sample and the FRiP.
 
 # `bed2rf2matrix.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bed2rf2matrix.sh)
 
@@ -51,6 +59,6 @@ The script will generate, for each *bigWig* file, a matrix (in *tsv* format) wit
 - `bigWigToWig`, from [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/).
 - `annotatePeaks.pl` from [Homer](http://homer.salk.edu/homer/ngs/annotation.html).
 
-### Further analysis
+### Further analyses
 
- You might consider the use of `HistoneMap/` MATLAB's scripts to plot the results as a HeatMap.
+ You might consider the use of any of the  MATLAB's scripts in [HistoneMap/](https://github.com/mscastillo/ChIP-Seq/tree/master/HistoneMap) to plot the results as a HeatMap.
