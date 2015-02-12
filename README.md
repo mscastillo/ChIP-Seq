@@ -4,7 +4,7 @@ ChIP-Seq
 This repository includes scripts for processing and analysing ChIP-Seq data.
 
 
-# `bed2frip.sh.m` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bed2frip.sh)
+# [`bed2frip.sh.m`](https://github.com/mscastillo/ChIP-Seq/blob/master/bed2frip.sh)
 Script to compute the Fraction of Reads-in-Peaks (FRiP) of a given peak profile in *bed* format. For adittional information about this quality index, see:
 
 > ChIP-seq guidelines and practices of the ENCODE and modENCODE consortia. *Genome Research* (2012). [PubMed: 22955991](http://www.ncbi.nlm.nih.gov/pubmed/22955991)
