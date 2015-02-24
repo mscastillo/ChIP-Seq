@@ -38,7 +38,7 @@ An input file with the long-range interactions in [*bedpe* format](http://bedtoo
 
 ### Outputs
 
-The script outputs a pair of *bed.gz* and *bed.gz.tbi* files with the format required by [WashU epigenome browser](http://washugb.blogspot.co.uk/2012/09/prepare-custom-long-range-interaction.html).
+The script outputs a pair of *bed.gz* and *bed.gz.tbi* files with the [format required](http://washugb.blogspot.co.uk/2012/09/prepare-custom-long-range-interaction.html) by WashU epigenome browser.
 
 ### Dependecies
 
