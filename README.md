@@ -45,6 +45,10 @@ The script outputs a pair of *bed.gz* and *bed.gz.tbi* files. Both files have to
  1. `bedSort` from the [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)
  2. `bgzip` and `tabidx` from [samtools](http://samtools.sourceforge.net/tabix.shtml).
 
+### Further analyses
+
+Check out the [NG2B](https://github.com/mscastillo/NG2B/blob/master/NG2B.md#how-to-visualize-long-range-chromosomal-interactions) to find how to visualise the results using the [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/).
+
 
 # `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh)
 
@@ -71,4 +75,4 @@ The script will generate, for each *bigWig* file, a matrix (in *tsv* format) wit
 
 ### Further analyses
 
- You might consider the use of any of the  MATLAB's scripts in [HistoneMap/](https://github.com/mscastillo/ChIP-Seq/tree/master/HistoneMap) to plot the results as a HeatMap.
+You might consider the use of any of the  MATLAB's scripts in [HistoneMap/](https://github.com/mscastillo/ChIP-Seq/tree/master/HistoneMap) to plot the results as a HeatMap.
