@@ -30,10 +30,20 @@ Script to map a set of peaks files to the genomic coordinates of an enzyme's res
 
 # `bedpe2washu.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bedpe2washu.sh)
 
+Script to process a long-range interaction data and display it on [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/) under the long-range interaction data.
 
-Script to process a long-range interaction data in *bedpe* format that outputs a pair of *bed.gz* and *bed.gz.tbi* files to display the data on [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/) under the long-range interaction data.
+### Inputs
 
-This script depends on `bedSort` (from the [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)) and `bgzip` and `tabidx` from [samtools](http://samtools.sourceforge.net/tabix.shtml).
+An input file with the long-range interactions in [*bedpe* format](http://bedtools.readthedocs.org/en/latest/content/general-usage.html#bedpe-format).
+
+### Outputs
+
+The script outputs a pair of *bed.gz* and *bed.gz.tbi* files. Both files have to be available by URL in a webserver and the link to the *bed.gz* file should be provided
+
+### Dependecies
+
+ 1. `bedSort` from the [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)
+ 2. `bgzip` and `tabidx` from [samtools](http://samtools.sourceforge.net/tabix.shtml).
 
 
 # `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh)
