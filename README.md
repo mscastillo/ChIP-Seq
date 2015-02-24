@@ -38,7 +38,7 @@ An input file with the long-range interactions in [*bedpe* format](http://bedtoo
 
 ### Outputs
 
-The script outputs a pair of *bed.gz* and *bed.gz.tbi* files. Both files have to be available by URL in a webserver and the link to the *bed.gz* file should be provided
+The script outputs a pair of *bed.gz* and *bed.gz.tbi* files with the format required by [WashU epigenome browser](http://washugb.blogspot.co.uk/2012/09/prepare-custom-long-range-interaction.html).
 
 ### Dependecies
 
@@ -47,7 +47,7 @@ The script outputs a pair of *bed.gz* and *bed.gz.tbi* files. Both files have to
 
 ### Further analyses
 
-Check out the [NG2B](https://github.com/mscastillo/NG2B/blob/master/NG2B.md#how-to-visualize-long-range-chromosomal-interactions) to find how to visualise the resulting files.
+Check out the [NG2B](https://github.com/mscastillo/NG2B/blob/master/NG2B.md#how-to-visualize-long-range-chromosomal-interactions) to find how to visualise the resulting files. Click [here](https://www.youtube.com/watch?v=im4AUvXFISM) to watch a tutorial on YouTube.
 
 
 # `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh)
