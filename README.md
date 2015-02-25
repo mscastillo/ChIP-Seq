@@ -106,7 +106,7 @@ All the heatmaps are normalised to make them directly comparable. Use the parame
 
 ### Further analyses
 
-You might consider the use of the next commad to stack all the PDFs toghether in a single one (it requires to install `imagemagix`):
+You might consider the use of the next commad to stack all the PDFs toghether in a single one (it requires to install [`imagemagick`](http://www.imagemagick.org/)):
 
 ```bash
 montage -tile 7x1 -geometry 1000 -density 500 *counts.pdf *heatmap.pdf *sorted*.pdf montage.pdf
