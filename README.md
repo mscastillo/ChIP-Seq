@@ -100,7 +100,7 @@ Suite of *MATLAB* scripts for plotting heatmaps from histones (or any other ChIP
 
 ### Outputs
 
-The script will generate and save as a high-resolution PDF a heatmap for each *matrix* input file and an extra figure with the peaks profile.
+The script will generate and save as a high-resolution PDF a heatmap for each *matrix* input file and an extra figure with the peaks profile. Each heatmap will include a density profile on top.
 
 All the heatmaps are normalised to make them directly comparable. Use the parameters *saturation_peak_cutoff* and *saturation_histones_cutoff* to control the saturation thresholds. The plots will use the colormaps defined on the top of the script, from black to *color1* and black to *color2*.
 
