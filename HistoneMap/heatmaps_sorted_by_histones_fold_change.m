@@ -7,7 +7,7 @@ clc
 
 peaksfile = 'example/peaks.counts.bed' ;
 histone2 = 'example/histone002.matrix' ;
-histone1 = 'example/histone002.matrix' ;
+histone1 = 'example/histone001.matrix' ;
 color1 = rgb2hsv( [1 0.2 0.2] ) ; cm1 = hsv2rgb([ color1(1)*ones(100,1) color1(2)*ones(100,1) linspace(0,color1(3),100)' ]) ;
 color2 = rgb2hsv( [0.4 1 0.2] ) ; cm2 = hsv2rgb([ color2(1)*ones(100,1) color2(2)*ones(100,1) linspace(0,color2(3),100)' ]) ;
 
