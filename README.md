@@ -38,7 +38,7 @@ An input file with the long-range interactions in [*bedpe* format](http://bedtoo
 
 ### Outputs
 
-The script outputs a pair of *bed.gz* and *bed.gz.tbi* files with the [format required](http://washugb.blogspot.co.uk/2012/09/prepare-custom-long-range-interaction.html) by WashU epigenome browser.
+The script outputs a pair of *bed.gz* and *bed.gz.tbi* files. Both files have to be available by URL in a webserver and the link to the *bed.gz* file should be provided
 
 ### Dependecies
 
@@ -47,7 +47,7 @@ The script outputs a pair of *bed.gz* and *bed.gz.tbi* files with the [format re
 
 ### Further analyses
 
-Check out the [NG2B](https://github.com/mscastillo/NG2B/blob/master/NG2B.md#how-to-visualize-long-range-chromosomal-interactions) to find how to visualise the resulting files. Click [here](https://www.youtube.com/watch?v=im4AUvXFISM) to watch a tutorial on YouTube.
+Check out the [NG2B](https://github.com/mscastillo/NG2B/blob/master/NG2B.md#how-to-visualize-long-range-chromosomal-interactions) to find how to visualise the resulting files.
 
 
 # `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh)
@@ -76,3 +76,36 @@ The script will generate, for each *bigWig* file, a matrix (in *tsv* format) wit
 ### Further analyses
 
 You might consider the use of any of the  MATLAB's scripts in [HistoneMap/](https://github.com/mscastillo/ChIP-Seq/tree/master/HistoneMap) to plot the results as a HeatMap.
+
+
+# `HistoneMap/` [:octocat:](https://github.com/mscastillo/ChIP-Seq/tree/master/HistoneMap)
+
+Suite of *MATLAB* scripts for plotting heatmaps from histones (or any other ChIP-Seq) experiments around a set of genomic regions.
+
+### Inputs
+
+1. All the scripts work in batch for a given set of input experiments. Once run, the script will ask you to select multiple *matrix* files. The input format of these *matrix* files should match with the output format of `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh), that uses Homer's `annotatePeaks.pl` to create a histogram around a given set of genomic regions.
+
+2. *peaksfile*, a peak file with the genomic regions that was considered to generate the *matrix* input files. This file is important to reshape the histograms profiles with different number of rows. The *peaksfile* should be in bed format including an extra fourth column with the number of reads falling on each peak (this information can be taken from the original *bigwig* file by using `bigWigToWig`).
+
+3. Additional inputs files may be required depending of the desired normalization, sorting, etc...
+
+ #### [`heatmaps_sorted_by_peaks.m`](https://github.com/mscastillo/ChIP-Seq/blob/master/HistoneMap/heatmaps_sorted_by_peaks.m)
+
+ This script do not requires any additional file. It will simply resort all the histograms according to the number of counts falling in any genomic regions (peaks).
+
+ #### [`heatmaps_sorted_by_histones_fold_change.m`](https://github.com/mscastillo/ChIP-Seq/blob/master/HistoneMap/heatmaps_sorted_by_histones_fold_change.m)
+
+ This script will resort all the histograms according to the fold change at each genomic regions (peaks). It will requires two addtional input files in *matrix* format, it will compute the cumulative fold change for each of the genomic regions and it will sort all the histograms in descencing order according to these fold changes.
+
+### Outputs
+
+The script will generate and save as a high-resolution PDF a heatmap for each *matrix* input file and an extra figure with the peaks profile. All the heatmaps are normalised to make them directly comparable. Use the parameters *saturation_peak_cutoff* and *saturation_histones_cutoff* to control the saturation thresholds.
+
+### Further analyses
+
+You might consider the use of the next commad to stack all the PDFs toghether in a single one (it requires to install `imagemagix`):
+
+```bash
+montage -tile 7x1 -geometry 1000 -density 500 *counts.pdf *heatmap.pdf *sorted*.pdf montage.pdf
+```
