@@ -30,7 +30,7 @@ Script to map a set of peaks files to the genomic coordinates of an enzyme's res
 
 # `bedpe2washu.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bedpe2washu.sh)
 
-Script to process a long-range interaction data and display it on [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/) under the long-range interaction data.
+Script to process long-range interaction data and display it on [WashU epigenome browser](http://epigenomegateway.wustl.edu/browser/) under the long-range interaction data type.
 
 ### Inputs
 
