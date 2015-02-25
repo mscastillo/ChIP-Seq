@@ -40,7 +40,7 @@ An input file with the long-range interactions in [*bedpe* format](http://bedtoo
 
 The script outputs a pair of *bed.gz* and *bed.gz.tbi* files. Both files have to be available by URL in a webserver and the link to the *bed.gz* file should be provided
 
-### Dependecies
+### Dependencies
 
  1. `bedSort` from the [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/)
  2. `bgzip` and `tabidx` from [samtools](http://samtools.sourceforge.net/tabix.shtml).
@@ -68,7 +68,7 @@ Additionally, the script requires to set up the *region* and *bin* sizes as a st
 
 The script will generate, for each *bigWig* file, a matrix (in *tsv* format) with the histograms around each genomic coordinates.
 
-### Dependecies
+### Dependencies
 
 - `bigWigToWig`, from [UCSC tools](http://hgdownload.cse.ucsc.edu/admin/exe/).
 - `annotatePeaks.pl` from [Homer](http://homer.salk.edu/homer/ngs/annotation.html).
