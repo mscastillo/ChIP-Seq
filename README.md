@@ -84,7 +84,7 @@ Suite of *MATLAB* scripts for plotting heatmaps from histones (or any other ChIP
 
 ### Inputs
 
-1. All the scripts work in batch for a given set of input experiments. Once run, the script will ask you to select multiple *matrix* files. The input format of these *matrix* files should match with the output format of `bw2histogram.sh` [:octocat:](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh), that uses Homer's `annotatePeaks.pl` to create a histogram around a given set of genomic regions.
+1. All the scripts work in batch for a given set of input experiments. Once run, the script will ask you to select multiple *matrix* files. The input format of these *matrix* files should match with the output format of [`bw2histogram.sh`](https://github.com/mscastillo/ChIP-Seq/blob/master/bw2histogram.sh), that uses Homer's `annotatePeaks.pl` to create a histogram around a given set of genomic regions.
 
 2. *peaksfile*, a peak file with the genomic regions that was considered to generate the *matrix* input files. This file is important to reshape the histograms profiles with different number of rows. The *peaksfile* should be in bed format including an extra fourth column with the number of reads falling on each peak (this information can be taken from the original *bigwig* file by using `bigWigToWig`).
 
