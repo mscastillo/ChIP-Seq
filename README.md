@@ -96,7 +96,7 @@ Suite of *MATLAB* scripts for plotting heatmaps from histones (or any other ChIP
 
  #### [`heatmaps_sorted_by_histones_fold_change.m`](https://github.com/mscastillo/ChIP-Seq/blob/master/HistoneMap/heatmaps_sorted_by_histones_fold_change.m)
 
- This script will resort all the histograms according to the fold change at each genomic regions (peaks). It will requires two addtional input files in *matrix* format, it will compute the cumulative fold change for each of the genomic regions and it will sort all the histograms in descencing order according to these fold changes.
+ This script will resort all the histograms according to the fold change at each genomic regions (peaks). It will requires two additional input files in *matrix* format, it will compute the cumulative fold change for each of the genomic regions and it will sort all the histograms in descending order according to these fold changes.
 
 ### Outputs
 
@@ -108,7 +108,7 @@ All the heatmaps are normalised to make them directly comparable. Use the parame
 
 ### Further analyses
 
-You might consider the use of the next commad to stack all the PDFs toghether in a single one (it requires to install [`imagemagick`](http://www.imagemagick.org/)):
+You might consider the use of the next command to stack all the PDFs together in a single one (it requires to install [`imagemagick`](http://www.imagemagick.org/)):
 
 ```bash
 montage -tile 7x1 -geometry 1000 -density 500 *counts.pdf *heatmap.pdf *sorted*.pdf montage.pdf
