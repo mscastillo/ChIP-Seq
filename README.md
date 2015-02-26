@@ -66,7 +66,7 @@ Additionally, the script requires to set up the *region* and *bin* sizes as a st
 
 ### Outputs
 
-The script will generate, for each *bigWig* file, a matrix (in *tsv* format) with the histograms around each genomic coordinates.
+The script will generate, for each *bigWig* file, a matrix with the histograms around each genomic coordinates. The output file names will match with the input ones and the *matrix* suffix.
 
 ### Dependencies
 
